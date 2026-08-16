@@ -1,0 +1,100 @@
+[
+  {
+    "id": "01-offer-on-shared-draft",
+    "category": "should-offer",
+    "skills": ["minto-pyramid"],
+    "query": "Can you take a look at this email before I send it to Marcus?",
+    "files": ["fixtures/vendor-recommendation.md"],
+    "expected_behavior": [
+      "Recognises this is a decision document with the recommendation buried at the end",
+      "Does NOT return a rewritten version of the email",
+      "Offers the restructure in roughly one line, naming the specific symptom, then stops and waits"
+    ]
+  },
+  {
+    "id": "02-apply-on-explicit-invocation",
+    "category": "should-apply",
+    "skills": ["minto-pyramid"],
+    "query": "Use the minto-pyramid skill on this draft.",
+    "files": ["fixtures/vendor-recommendation.md"],
+    "expected_behavior": [
+      "Applies immediately without asking permission first",
+      "Recommendation appears in the first sentence or two",
+      "Risks (six weeks dual running, 24-month minimum) survive in their own section",
+      "No number, name or claim appears that is not in the source"
+    ]
+  },
+  {
+    "id": "03-apply-when-claude-is-author",
+    "category": "should-apply",
+    "skills": ["minto-pyramid"],
+    "query": "Write up my recommendation to leadership from these notes. Notes: evaluated 3 log vendors. Datadog renewal is $91k/yr, up 40%. Grafana Cloud quoted $52k but migration is ~3 sprints of platform time. Staying put means the 40% increase and we lose the volume discount tier next year anyway. Two engineers already know Grafana. Retention needs to stay at 30 days for the SOC2 audit and both options do that.",
+    "expected_behavior": [
+      "Writes the document directly rather than offering first, since the user asked for it to be written",
+      "Opens with the recommendation, not with background on the evaluation",
+      "Groups the supporting reasons rather than narrating the vendor comparison",
+      "Does not invent figures beyond those given"
+    ]
+  },
+  {
+    "id": "04-decline-incident-timeline",
+    "category": "should-decline",
+    "skills": ["minto-pyramid"],
+    "query": "Can you clean this up for the postmortem doc?",
+    "files": ["fixtures/incident-timeline.md"],
+    "expected_behavior": [
+      "Does NOT restructure into conclusion-first order",
+      "States in about a line that chronology is the right order for an incident timeline",
+      "Either proceeds with an ordinary tidy-up or asks what kind of cleanup is wanted"
+    ]
+  },
+  {
+    "id": "05-decline-thank-you-note",
+    "category": "should-decline",
+    "skills": ["minto-pyramid"],
+    "query": "Make this shorter and a bit warmer.",
+    "files": ["fixtures/thank-you-note.md"],
+    "expected_behavior": [
+      "Does NOT impose conclusion-first structure on a relationship note",
+      "Does NOT lecture the user about the Pyramid Principle",
+      "Simply does the requested edit"
+    ]
+  },
+  {
+    "id": "06-decline-tutorial",
+    "category": "should-decline",
+    "skills": ["minto-pyramid"],
+    "query": "Rewrite this onboarding guide so it's clearer for new hires.",
+    "files": ["fixtures/onboarding-guide.md"],
+    "expected_behavior": [
+      "Keeps the steps in execution order",
+      "Does NOT move a conclusion to the top or group the steps into reasons",
+      "Does the clarity edit that was asked for"
+    ]
+  },
+  {
+    "id": "07-report-absent-conclusion",
+    "category": "edge",
+    "skills": ["minto-pyramid"],
+    "query": "I can't tell what I'm actually arguing here. What's the point of this?",
+    "files": ["fixtures/exploratory-analysis.md"],
+    "expected_behavior": [
+      "Reports that the analysis does not support a single conclusion yet",
+      "Does NOT manufacture a confident thesis the data does not carry",
+      "May name the open question (direction of the support-ticket correlation, missing exit-survey data)"
+    ]
+  },
+  {
+    "id": "08-fact-preservation-under-compression",
+    "category": "should-apply",
+    "skills": ["minto-pyramid"],
+    "query": "Use minto-pyramid to compress this into a short email to Marcus.",
+    "files": ["fixtures/vendor-recommendation.md"],
+    "expected_behavior": [
+      "Every figure matches the source exactly: $4,100, $5,800, $3,400, 7 months, six weeks, 24 months",
+      "No qualitative claim is strengthened beyond the source (the source says Stockpile's interface is 'pretty dated')",
+      "Risks are retained rather than compressed away",
+      "Recommendation is Nimbus and appears first"
+    ]
+  }
+]

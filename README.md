@@ -20,13 +20,19 @@ Or hand the repo URL to your agent and ask it to install the skill. Or download 
 
 ## Use
 
-It triggers on its own when you ask for a recommendation, proposal, memo, exec summary, or a "make this clearer" edit. To force it:
+**It asks before it rewrites you.** That's the design. When it loads on a draft you shared, it doesn't hand back a restructured version — it says one line about what it noticed and waits:
+
+> "This looks like a pyramid case — your recommendation lands in paragraph four. Want me to restructure it, conclusion first?"
+
+Say yes and it goes. Say nothing and your draft stays yours. You know who the reader is, what's political, and what was already settled on a call; the agent doesn't. The exceptions are when you asked for it outright, or asked the agent to *write* the document — then it just does the work:
 
 ```
 Use the minto-pyramid skill on this draft.
 ```
 
-Five operations are defined inside — restructure, buried-lede test, reason audit, so-what pass, email version. Ask for one by name, or hand it a draft and let it start with the restructure.
+And when the document isn't a decision document at all — a timeline, a runbook, a thank-you note — it says so in a line and leaves it alone.
+
+Five operations are defined inside: restructure, buried-lede test, reason audit, so-what pass, email version. Ask for one by name, or hand over a draft and let it start with the restructure.
 
 ## What it actually does
 

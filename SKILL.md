@@ -1,15 +1,46 @@
 ---
 name: minto-pyramid
-description: Use when writing or rewriting something that asks a reader to accept a judgment or make a decision — a recommendation, proposal, status update with an ask, exec summary, memo, or review — or when a draft buries its point, narrates the process instead of the finding, or someone asks to make it clearer, shorter, or more executive. Not for incident timelines, runbooks, tutorials, or anything where chronology is the content.
+description: Restructures writing into Barbara Minto's Pyramid Principle — conclusion first, then grouped reasons, then evidence — and audits an existing draft's logic against Minto's rules. Use when the user is writing, or has drafted, something that asks a reader to accept a judgment or make a decision: a recommendation, proposal, exec summary, memo, review with a verdict, or status update with an ask; or when a draft buries its point or narrates the process instead of the finding. Not for incident timelines, runbooks, tutorials, notes, or writing where chronology is the content.
 ---
 
 # Minto Pyramid
 
+## Step 0 — Gate. Do this before anything else.
+
+**Question 1: Does this document ask its reader to accept a judgment or make a decision?**
+
+Yes for recommendations, proposals, verdicts, analyses with a conclusion, updates carrying an ask. No for timelines, runbooks, procedures, tutorials, notes, descriptions, thanks, apologies, and anything whose value is the sequence of events.
+
+**No → say so in one line and stop.** Do not restructure it.
+
+> "This isn't a pyramid case — it's an incident timeline, and time order is the right order here. Want me to tighten it as-is instead?"
+
+**Question 2: Did the user ask you to change it?**
+
+If they named the skill, asked for a restructure, or asked you to **write** the document — apply it now. No preamble, no asking.
+
+Otherwise — they shared **their own** draft to look at, or it came up sideways — your entire response is **two sentences**:
+
+1. One sentence naming the specific symptom: where the point actually lands, what's buried under what.
+2. One question offering the restructure.
+
+> "Your recommendation lands in paragraph six, after the investigation narrative. Want me to restructure it conclusion-first?"
+
+Then stop and wait for an answer.
+
+Ordinary review notes they actually asked for can sit alongside it — a wrong number, a weak subject line, a hedge that undersells the case. What must not appear is **the restructured version itself**: not as a preview, a sample, or "here's what it would look like." The rewrite is the thing being offered — if it's in your message, nothing was offered, and they've been handed a fait accompli on their own writing. This is the most common way to get this skill wrong, and it happens because producing the rewrite feels more helpful than asking. It isn't.
+
+Talk about their draft, not about this skill. Don't narrate the machinery — no "the gate this skill checks", no operation numbers. Name what you see in their words.
+
+If they decline, drop it and don't raise it again in that conversation.
+
+**Why offer rather than act:** the user knows what you don't — who the reader is, what's political, what was already settled on a call, whose voice this has to sound like. Restructuring someone's draft unasked is rewriting them. Offer once; act on yes.
+
 ## Overview
 
-Barbara Minto's structure, built at McKinsey and published as *The Pyramid Principle*: **the answer first, then the grouped reasons that support it, then the evidence under each reason.**
+Minto's structure, built at McKinsey and published as *The Pyramid Principle*: **the answer first, then the grouped reasons that support it, then the evidence under each reason.**
 
-What this fixes is order, not intelligence. Walking a reader through your process and arriving at the point is fine for a story and wrong for a reader deciding in about a sentence whether to keep going. It is also the order most prose is written in, which is why models produce it by default.
+What this fixes is order, not intelligence. Walking a reader through your process and arriving at the point is fine for a story and wrong for a reader deciding in about a sentence whether to keep going. It's also the order most prose is written in, which is why models produce it by default.
 
 ## The shape
 
@@ -34,7 +65,7 @@ Include only as much S and C as the reader needs to feel the question. When they
 
 1. **Vertical** — every idea summarizes the ideas grouped beneath it, and each group answers the question its parent raises. If a group doesn't answer the parent's question, it's in the wrong place.
 2. **Same kind** — ideas in a grouping are the same kind of idea.
-3. **Logical order** — deductive, chronological, structural, or ranked by importance. An order chosen on purpose is not enough; it has to be one of these.
+3. **Logical order** — deductive, chronological, structural, or ranked by importance. An order chosen on purpose isn't enough; it has to be one of those four.
 
 A grouping is one of two kinds:
 
@@ -49,7 +80,7 @@ Anything that won't sit under a reason is evidence, or it's cut — with one exc
 
 ## Operations
 
-Ask for one by name, or hand over a draft and start with 1. Every operation is bound by one rule: **invent nothing.** Every number, name, quote and claim must already exist in the source. Sharpening the language is the job; upgrading "pretty dated" into "a decade behind" is not.
+Once past the gate: hand back a rewrite with operation 1, or run one by name. Every operation is bound by one rule: **invent nothing.** Every number, name, quote and claim must already exist in the source. Sharpening the language is the job; upgrading "pretty dated" into "a decade behind" is not.
 
 | # | Operation | Use it when |
 |---|---|---|
@@ -95,6 +126,7 @@ Nothing was added or removed. The decision moved to word four.
 
 | Mistake | Fix |
 |---|---|
+| Restructuring a draft the user only asked you to read | Gate question 2. Offer, wait |
 | Padding to exactly three reasons | Use the number the logic requires; merge or split honestly |
 | Reasons that are really evidence | If it supports another reason rather than the answer, demote it |
 | Hedging until the claim dissolves ("we may want to consider") | State the claim at the strength the evidence supports — "likely", "on current data" — rather than dissolving it into a maybe |
@@ -120,4 +152,4 @@ Nothing was added or removed. The decision moved to word four.
 
 ## Make it the default
 
-To stop invoking this per document, put the shape in project instructions, a CLAUDE.md, or a saved style: *context only as far as it raises the question, then the conclusion, then reasons that are the same kind of idea and cover the case, evidence under each, risks and next steps at the close.*
+If you want the shape without being asked each time, put it in project instructions, a CLAUDE.md, or a saved style: *context only as far as it raises the question, then the conclusion, then reasons that are the same kind of idea and cover the case, evidence under each, risks and next steps at the close.*
