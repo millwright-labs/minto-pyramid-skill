@@ -7,16 +7,16 @@ Works in Claude Code, Claude Desktop, and anything else that reads Agent Skills.
 ## Install
 
 ```bash
-git clone https://github.com/USER/minto-pyramid-skill ~/.claude/skills/minto-pyramid
+git clone https://github.com/millwright-labs/minto-pyramid-skill ~/.claude/skills/minto-pyramid
 ```
 
 Windows (PowerShell):
 
 ```powershell
-git clone https://github.com/USER/minto-pyramid-skill "$env:USERPROFILE\.claude\skills\minto-pyramid"
+git clone https://github.com/millwright-labs/minto-pyramid-skill "$env:USERPROFILE\.claude\skills\minto-pyramid"
 ```
 
-Or just download `SKILL.md` and drop it in `~/.claude/skills/minto-pyramid/SKILL.md`.
+Or hand the repo URL to your agent and ask it to install the skill. Or download `SKILL.md` and drop it in `~/.claude/skills/minto-pyramid/SKILL.md`. Restart your session and it's live.
 
 ## Use
 
@@ -42,6 +42,7 @@ The idea came from [an Instagram post by @thewizeai](https://www.instagram.com/p
 - *The Pyramid Principle: Logic in Writing and Thinking* was published in 1985; the expanded *The Minto Pyramid Principle: Logic in Writing, Thinking and Problem Solving* in 1996.
 - Minto coined MECE. ([McKinsey alumni interview: "MECE: I invented it, so I get to say how to pronounce it"](https://www.mckinsey.com/alumni/news-and-events/global-news/alumni-news/barbara-minto-mece-i-invented-it-so-i-get-to-say-how-to-pronounce-it))
 - The rules of the pyramid: each idea summarizes the ideas grouped below it; ideas in a grouping are the same kind of idea; ideas in a grouping are logically ordered. ([overview](https://modelthinkers.com/mental-model/minto-pyramid-scqa))
+- MECE tests **inductive** groupings — separate reasons of the same kind. It does not apply to deductive chains, where each step depends on the last. The skill keeps the two apart; most short summaries of Minto blur them.
 
 **Corrected**
 
@@ -51,4 +52,4 @@ The idea came from [an Instagram post by @thewizeai](https://www.instagram.com/p
 
 ## License
 
-MIT
+MIT — Millwright Labs. Use it, fork it, ship it.
