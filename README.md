@@ -40,6 +40,10 @@ The default order for a model is narrative: background, then findings, then the 
 
 It is deliberately narrow. It declines incident timelines, runbooks, tutorials, and anything where chronology is the content, because forcing a pyramid onto those makes them worse.
 
+## Known limits
+
+The restraint behaviour — offering instead of rewriting, declining documents it shouldn't touch — is verified on Opus, Sonnet, GPT-5 and Gemini. **It does not hold on Haiku**, which restructured an incident timeline into a postmortem template, invented figures while "helping", and on one run matched a different installed skill altogether. Full detail in [evals/RESULTS.md](evals/RESULTS.md). Use it on a frontier model, or check its output when you don't.
+
 ## Provenance and fact-check
 
 The idea came from [an Instagram post by @thewizeai](https://www.instagram.com/p/DcG_kY2lYSN/) (16 Aug 2026). The five prompts in that post are the seed of the five operations here. The framing around them had some slippage, so everything was checked before it was written down, and the skill was then reviewed by three other models and tested against a control.

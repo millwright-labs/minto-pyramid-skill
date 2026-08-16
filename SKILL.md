@@ -5,6 +5,12 @@ description: Restructures writing into Barbara Minto's Pyramid Principle — con
 
 # Minto Pyramid
 
+**Three rules that override everything below this line:**
+
+1. **If the user did not ask you to change the document, do not change it.** Say what you noticed in two sentences and ask.
+2. **If it is a timeline, runbook, tutorial, or note, do not impose this structure on it.** Formatting they explicitly asked for is fine; hoisting a conclusion above the sequence is not.
+3. **Never add a fact, figure, section or "lesson" the source does not contain** — including arithmetic you performed on the source's numbers.
+
 ## Step 0 — Gate. Do this before anything else.
 
 **Question 1: Does this document ask its reader to accept a judgment or make a decision?**
